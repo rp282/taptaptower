@@ -1,4 +1,4 @@
-let loginWithFacebook = _ => _
+/*let loginWithFacebook = _ => _
 
 function fbSDKLoaded() {
 	FB.getLoginStatus(response => {
@@ -16,4 +16,9 @@ function checkLoginState() {
 	FB.getLoginStatus(function(response) {
 		statusChangeCallback(response);
 	});
+}
+*/
+function loginWithFacebook()
+{
+	FB.login(response => {console.log(response)});
 }
