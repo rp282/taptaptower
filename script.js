@@ -1,18 +1,8 @@
-function fbSDKLoaded() {
-	FB.getLoginStatus(response => {
-		if (response.status === 'not_authorized') {
-			loginWithFacebook = _ => {
-				console.log('test');
-				FB.login(response => {
-					console.log(response)
-				})
-			}
-		}
-	});
-}
-function loginWithFacebook() {
-	console.log('test1');
+document.getElementById('loginbtn').addEventListener('click', loginWithFacebook, false)
+
+function loginWithFacebook(e) {
 	FB.login(response => {
 		console.log(response)
-	})
+	}, {scope: 'public_profile,email'})
+	return false
 }
