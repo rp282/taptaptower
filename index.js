@@ -1,7 +1,8 @@
-var express = require('express');
-var app = express();
-var path = require('path')
+const express = require('express');
+const app = express();
+const path = require('path')
+const port = 3000
 
-app.use('/', express.static(path.join(__dirname, 'template')))
+app.use(express.static(__dirname))
 
-app.listen(1000, _ => console.log('listening'))
+app.listen(port, _ => console.log('listening'))
