@@ -7,9 +7,9 @@
 	<title>Facebook Login</title>
 </head>
 <body>
-	<a href="" onclick="javascript:loginWithFacebook()">Login with facebook</a>
-
-  <script src="/script.js"></script>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=238921161390&autoLogAppEvents=1"></script>
+  <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
   <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
   <script>
     window.fbAsyncInit = function() {
