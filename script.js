@@ -1,4 +1,3 @@
-document.getElementById('loginbtn').addEventListener('click', loginWithFacebook(), false)
 
 function loginWithFacebook(e) {
 	FB.login(response => {
@@ -6,3 +5,5 @@ function loginWithFacebook(e) {
 	}, {scope: 'public_profile,email'})
 	return false
 }
+
+document.getElementById('loginbtn').addEventListener('click', loginWithFacebook, false)
