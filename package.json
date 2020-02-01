@@ -9,6 +9,8 @@
   "author": "Ryan Pun",
   "license": "ISC",
   "dependencies": {
+    "brew": "0.0.8",
+    "certbot": "^5.0.3",
     "express": "^4.17.1",
     "mongodb": "^3.5.2",
     "passport": "^0.4.1",

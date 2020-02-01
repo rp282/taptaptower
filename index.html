@@ -9,17 +9,19 @@
 <body>
 	<a href="" onclick="loginWithFacebook">Login with facebook</a>
 
+  <script src="/script.js"></script>
+
   <script>
     window.fbAsyncInit = function() {
       FB.init({
-        appId      : '{your-app-id}',
+        appId      : '645285422893056',
         cookie     : true,
         xfbml      : true,
         version    : 'v5.0'
       });
 
       FB.AppEvents.logPageView();
-
+      fbSDKLoaded();
     };
 
     (function(d, s, id){
@@ -30,7 +32,6 @@
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
   </script>
-  <script src="/script.js"></script>
-  
+
 </body>
 </html>
