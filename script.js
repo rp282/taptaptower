@@ -1,4 +1,4 @@
-document.getElementById('loginbtn').addEventListener('click', loginWithFacebook, false)
+document.getElementById('loginbtn').addEventListener('click', loginWithFacebook(), false)
 
 function loginWithFacebook(e) {
 	FB.login(response => {
