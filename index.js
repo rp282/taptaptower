@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, '/public')));
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    console.log(`App is running on port ${ port }`);
+    const d = new Date().getTime();
+    console.log(`${new Date(d).toString()} App is running on port ${ port }`);
 });
