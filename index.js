@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-const fetch = require('node-fetch');
+//const fetch = require('node-fetch');
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.json());
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 app.post('/login-with-facebook', (req, res) => {
   const { accessToken, userID } = req.body;
-  
+
 });
 
 app.listen(port, () => {
