@@ -1,13 +1,23 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
+const fetch = require('node-fetch');
 
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;
 
+/*
 app.get('/', (req, res) => {
   res.redirect(path.join(req, '/home.html'));
+});
+*/
+
+app.post('/login-with-facebook', (req, res) => {
+  const { accessToken, userID } = req.body;
+  
 });
 
 app.listen(port, () => {
