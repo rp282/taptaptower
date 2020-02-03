@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.redirect(path.join(req, '/home'));
+  res.redirect(path.join(req, '/home.html'));
 });
 
 app.listen(port, () => {
